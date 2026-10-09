@@ -1046,7 +1046,7 @@ function initAuth(root) {
   const draw = () => {
     const registration = mode === "register";
     const notice = pending
-      ? `<div class="auth-note" style="margin-bottom:1rem;padding:.8rem 1rem;border:1px solid rgba(239,114,122,.35);border-radius:12px;background:rgba(239,114,122,.08);color:#1f2937"><strong>Silakan masuk.</strong> Untuk ${pending.type === "cart" ? "menambahkan barang ini ke keranjang" : pending.type === "buyNow" ? "melanjutkan ke pembayaran" : "menyimpan produk ini ke daftar keinginan"}.` +
+      ? `<div class="auth-note" style="margin-bottom:1rem;padding:.8rem 1rem;border:1px solid rgba(239,114,122,.35);border-radius:12px;background:rgba(239,114,122,.08);color:var(--text)"><strong>Silakan masuk.</strong> Untuk ${pending.type === "cart" ? "menambahkan barang ini ke keranjang" : pending.type === "buyNow" ? "melanjutkan ke pembayaran" : "menyimpan produk ini ke daftar keinginan"}.` +
         `<div style="display:flex;gap:.5rem;margin-top:.75rem;flex-wrap:wrap"><button type="button" class="btn btn-ghost" data-auth-cancel>Batal</button></div></div>`
       : "";
     root.innerHTML = `
