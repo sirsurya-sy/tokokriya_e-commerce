@@ -1,79 +1,81 @@
 # TokoKriya
 
-Toko online **Toko Kriya Sidoarjo** — aset referensi desain dan foto produk sumber untuk implementasi website e-commerce.
+Website katalog dan toko online demo untuk **TokoKriya**, yang menampilkan kerajinan tangan lokal seperti produk kulit Tanggulangin, anyaman, keramik, kayu, tekstil, dan dekorasi. Antarmuka menggunakan Bahasa Indonesia dan harga dalam Rupiah.
 
-## Struktur folder
+## Fitur
 
+- Beranda dengan kategori, produk pilihan, produk baru, dan produk terlaris.
+- Katalog dengan pencarian, filter kategori, pengurutan, dan halaman detail produk.
+- Keranjang belanja, daftar keinginan, kode promo, pilihan pengiriman, dan simulasi checkout.
+- Akun demo dengan profil, alamat, metode pembayaran, notifikasi, pengaturan, dan daftar pesanan.
+- Halaman informasi: Tentang, Jurnal/artikel, Kontak, FAQ, pengiriman, pengembalian, privasi, dan ketentuan.
+- Tema gelap, tata letak responsif, animasi, transisi halaman, dan penyimpanan preferensi/data demo di browser.
+
+## Teknologi
+
+- HTML5
+- CSS3
+- JavaScript (vanilla)
+- `localStorage` dan `sessionStorage` untuk menyimpan data demo pada browser
+
+Tidak memerlukan framework atau instalasi dependency.
+
+## Menjalankan website
+
+Anda dapat membuka `index.html` langsung di browser. Untuk pengalaman yang lebih konsisten, jalankan server lokal dari folder proyek.
+
+Dengan Python:
+
+```bash
+python -m http.server 8000
 ```
-tokokriya1/
-├── reference/
-│   ├── homepage-reference.png
-│   ├── shop-reference.png
-│   └── all-pages-reference.png
-│
+
+Buka [http://localhost:8000](http://localhost:8000) di browser. Hentikan server dengan `Ctrl+C` di terminal.
+
+> Jika perintah `python` tidak tersedia di Windows, coba `py -m http.server 8000`.
+
+Atau buka folder proyek di Visual Studio Code dan jalankan `index.html` menggunakan ekstensi Live Server.
+
+## Halaman
+
+| Halaman | File |
+| --- | --- |
+| Beranda | `index.html` |
+| Katalog dan pencarian | `shop.html`, `search.html` |
+| Produk terlaris dan produk baru | `best-sellers.html`, `new-arrivals.html` |
+| Detail produk | `product-detail.html` |
+| Keranjang, checkout, konfirmasi pesanan | `cart.html`, `checkout.html`, `order-success.html` |
+| Wishlist | `wishlist.html` |
+| Akun dan pesanan | `account.html`, `orders.html`, `order-detail.html` |
+| Profil dan preferensi akun | `profile.html`, `addresses.html`, `payment-methods.html`, `notifications.html`, `settings.html` |
+| Informasi dan konten | `about.html`, `blog.html`, `blog-detail.html`, `contact.html`, `faq.html` |
+| Kebijakan | `shipping.html`, `returns.html`, `privacy.html`, `terms.html` |
+
+## Struktur proyek
+
+```text
+.
 ├── assets/
-│   └── source/
-│       └── [foto produk]
-│
-└── README.md
+│   └── products/       # Foto produk
+├── css/
+│   ├── style.css       # Gaya utama
+│   ├── responsive.css  # Tampilan responsif
+│   └── animations.css  # Animasi dan transisi
+├── js/
+│   ├── data.js         # Data produk, kategori, artikel, dan opsi toko
+│   ├── products.js     # Filter dan tampilan produk
+│   ├── cart.js         # Keranjang dan perhitungan harga
+│   ├── wishlist.js     # Daftar keinginan
+│   ├── account.js      # Akun dan data pelanggan demo
+│   ├── checkout.js     # Pembuatan pesanan demo
+│   ├── utils.js        # Utilitas umum dan penyimpanan browser
+│   ├── app.js          # Interaksi dan inisialisasi halaman
+│   └── loading.js      # Tampilan loading
+├── reference/          # Materi referensi proyek
+└── *.html              # Halaman website
 ```
 
-## Referensi desain
+## Catatan
 
-Gunakan file di `reference/` sebagai arah visual utama:
-
-| File | Isi |
-|------|-----|
-| `homepage-reference.png` | Arah layout homepage (hero editorial, kategori, produk) |
-| `shop-reference.png` | Arah halaman katalog (filter sidebar + grid produk) |
-| `all-pages-reference.png` | Kit 22 halaman: Best Sellers, New Arrivals, Product Detail, Search, Wishlist, Cart, Checkout, Order Success, Account, Orders, Order Detail, Profile, Addresses, Payment Methods, Notifications, About, Blog, Blog Detail, Contact, FAQ, Footer |
-
-Bahasa desain:
-
-- Latar putih, tipografi hitam, aksen oranye (`#FF5A1F`)
-- Border abu tipis, kartu membulat, whitespace luas
-- Logo: **Toko** gelap + **Kriya** oranye
-- Harga dalam Rupiah (`Rp`)
-
-## Foto produk sumber
-
-File di `assets/source/` siap dipakai untuk kartu produk, gallery detail, cart, wishlist, dan banner.
-
-| File | Produk |
-|------|--------|
-| `black-handbag.jpg` | Black Handbag |
-| `beige-handbag.jpg` | Beige Handbag |
-| `mini-handbag.jpg` | Mini Handbag / Quilted Bag |
-| `tote-bag.jpg` | Tote Bag |
-| `white-sneakers.jpg` | White Sneakers |
-| `canvas-sneakers.jpg` | Canvas Sneakers |
-| `leather-boots.jpg` | Black Leather Boots |
-| `oversized-jacket.jpg` | Oversized Jacket |
-| `trench-coat.jpg` | Minimalist Trench Coat |
-| `ribbed-sweater.jpg` | Ribbed Knit Sweater |
-| `tailored-blazer.jpg` | Tailored Blazer |
-| `baseball-cap.jpg` | Baseball Cap |
-| `sunglasses.jpg` | Sunglasses |
-| `leather-watch.jpg` | Leather Watch |
-| `wallet.jpg` | Wallet |
-| `wireless-headphones.jpg` | Wireless Headphones |
-| `bluetooth-speaker.jpg` | Bluetooth Speaker |
-| `perfume.jpg` | Eau De Parfum |
-| `face-serum.jpg` | Face Serum |
-| `lipstick-set.jpg` | Lipstick Set |
-| `yoga-mat.jpg` | Yoga Mat |
-| `ceramic-vase.jpg` | Ceramic Vase |
-| `desk-lamp.jpg` | Desk Lamp |
-| `backpack.jpg` | Backpack |
-| `hero-editorial.jpg` | Foto editorial hero homepage |
-
-Foto bersumber dari [Unsplash](https://unsplash.com) (lisensi Unsplash). Jangan duplikasi satu foto untuk produk yang tidak berhubungan.
-
-## Catatan implementasi
-
-Website belum dibangun di folder ini — folder ini adalah **starter aset**. Saat coding:
-
-- HTML5, CSS3, JavaScript (tanpa React/Vue/Angular)
-- Nama toko selalu **TokoKriya**
-- Alur utama: Home → Shop → Product Detail → Cart → Checkout → Order Success
+Website ini merupakan **demo frontend**. Data produk dan pesanan disimpan di browser masing-masing menggunakan Web Storage. Checkout, pilihan pembayaran, akun, dan pesanan tidak terhubung ke server, payment gateway, atau layanan pengiriman sungguhan. Data browser dapat hilang ketika penyimpanan situs dibersihkan dan tidak otomatis tersinkron antarperangkat.
 
