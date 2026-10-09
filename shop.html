@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Katalog Kerajinan — TokoKriya</title>
+  <script>try{if(localStorage.getItem("tokokriya-theme")==="dark")document.documentElement.dataset.theme="dark"}catch{}try{if(sessionStorage.getItem("tk:page-transition")==="1")document.documentElement.dataset.pageTransition="pending"}catch{}try{if(sessionStorage.getItem("tk:loading:completed:v1")!=="1")document.documentElement.dataset.sessionLoading="1"}catch{}</script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-page="shop">
+  <script src="js/loading.js"></script>
+  <header id="site-header" class="site-header"></header>
+  <main id="main" class="container" style="padding-top:1.5rem">
+    <p class="breadcrumb"><a href="index.html">Beranda</a> / Katalog</p>
+    <h1>Katalog Kerajinan</h1>
+    <p class="muted">Jelajahi karya pilihan dari pengrajin lokal.</p>
+    <div class="pills">
+      <button class="pill cat-pill is-active" type="button" data-cat="All">Semua</button>
+      <button class="pill cat-pill" type="button" data-cat="Kulit Tanggulangin">Kulit Tanggulangin</button>
+      <button class="pill cat-pill" type="button" data-cat="Anyaman">Anyaman</button>
+      <button class="pill cat-pill" type="button" data-cat="Kerajinan Kayu">Kerajinan Kayu</button>
+      <button class="pill cat-pill" type="button" data-cat="Perhiasan">Perhiasan</button>
+      <button class="pill cat-pill" type="button" data-cat="Keramik">Keramik</button>
+      <button class="pill cat-pill" type="button" data-cat="Tekstil">Tekstil</button>
+      <button class="pill cat-pill" type="button" data-cat="Dekorasi">Dekorasi</button>
+    </div>
+    <div class="shop-toolbar">
+      <button class="btn btn-ghost filter-toggle" type="button" data-open-filters>Filter</button>
+      <p id="result-count">Menampilkan produk</p>
+      <div class="shop-controls">
+        <form class="shop-search" id="shop-search-form" role="search" autocomplete="off">
+          <label class="sr-only" for="shop-q">Cari produk</label>
+          <input id="shop-q" name="q" type="search" placeholder="Cari produk..." autocomplete="off">
+          <button class="btn btn-primary" type="submit">Cari</button>
+        </form>
+        <label>Urutkan
+          <select id="sort">
+            <option value="recommended">Rekomendasi</option>
+            <option value="newest">Terbaru</option>
+            <option value="price-asc">Harga: Terendah ke Tertinggi</option>
+            <option value="price-desc">Harga: Tertinggi ke Terendah</option>
+            <option value="rating">Penilaian</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="shop-layout">
+      <aside class="shop-sidebar" aria-label="Filter">
+        <div class="section-head"><h2>Filter</h2><button class="btn btn-ghost filter-toggle" type="button" data-close-filters>Tutup</button></div>
+        <div class="filter-group">
+          <h3>Rentang Harga</h3>
+          <label><input type="radio" name="price" value="" checked> Semua harga</label>
+          <label><input type="radio" name="price" value="low"> Di bawah Rp 300.000</label>
+          <label><input type="radio" name="price" value="mid"> Rp 300.000 - 700.000</label>
+          <label><input type="radio" name="price" value="high"> Di atas Rp 700.000</label>
+        </div>
+        <div class="filter-group">
+          <h3>Pengrajin</h3>
+          <div id="brand-filter-options"></div>
+        </div>
+        <div class="filter-group">
+          <h3>Penilaian</h3>
+          <label><input type="radio" name="rating" value="0" checked> Semua penilaian</label>
+          <label><input type="radio" name="rating" value="4"> 4 bintang ke atas</label>
+          <label><input type="radio" name="rating" value="4.8"> 4,8 bintang ke atas</label>
+        </div>
+        <div class="filter-group">
+          <h3>Ketersediaan</h3>
+          <label><input type="checkbox" name="avail" value="in"> Tersedia</label>
+        </div>
+      </aside>
+      <div class="products-grid" id="shop-grid"></div>
+    </div>
+  </main>
+  <footer id="site-footer" class="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/account.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

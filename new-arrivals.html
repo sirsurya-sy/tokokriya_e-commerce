@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produk Baru — TokoKriya</title>
+  <script>try{if(localStorage.getItem("tokokriya-theme")==="dark")document.documentElement.dataset.theme="dark"}catch{}try{if(sessionStorage.getItem("tk:page-transition")==="1")document.documentElement.dataset.pageTransition="pending"}catch{}try{if(sessionStorage.getItem("tk:loading:completed:v1")!=="1")document.documentElement.dataset.sessionLoading="1"}catch{}</script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-page="new">
+  <script src="js/loading.js"></script>
+  <header id="site-header" class="site-header"></header>
+  <main id="main" class="container" style="padding-top:1.5rem">
+    <section class="page-hero">
+      <div>
+        <p class="eyebrow">Koleksi terbaru</p>
+        <h1>Produk Baru</h1>
+        <p class="muted">Temukan karya terbaru dari pengrajin lokal.</p>
+      </div>
+    </section>
+    <h2>Baru ditambahkan</h2>
+    <div class="pills">
+      <button class="pill cat-pill is-active" type="button" data-cat="All">Semua</button>
+      <button class="pill cat-pill" type="button" data-cat="Kulit Tanggulangin">Kulit Tanggulangin</button>
+      <button class="pill cat-pill" type="button" data-cat="Anyaman">Anyaman</button>
+      <button class="pill cat-pill" type="button" data-cat="Kerajinan Kayu">Kerajinan Kayu</button>
+      <button class="pill cat-pill" type="button" data-cat="Perhiasan">Perhiasan</button>
+      <button class="pill cat-pill" type="button" data-cat="Keramik">Keramik</button>
+      <button class="pill cat-pill" type="button" data-cat="Tekstil">Tekstil</button>
+      <button class="pill cat-pill" type="button" data-cat="Dekorasi">Dekorasi</button>
+    </div>
+    <div class="shop-toolbar">
+      <p id="result-count"></p>
+      <label>Urutkan
+        <select id="sort">
+          <option value="recommended">Rekomendasi</option>
+          <option value="newest">Terbaru</option>
+          <option value="price-asc">Harga: Terendah ke Tertinggi</option>
+          <option value="price-desc">Harga: Tertinggi ke Terendah</option>
+          <option value="rating">Penilaian</option>
+        </select>
+      </label>
+    </div>
+    <div class="products-grid" id="catalog-grid"></div>
+  </main>
+  <footer id="site-footer" class="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/account.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
